@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/github/license/flavioro/daytrade-bot-python)
+![Tests](https://github.com/flavioro/daytrade-bot-python/actions/workflows/tests.yml/badge.svg)
 
 Projeto em Python para monitoramento e execução automatizada de ordens no MetaTrader 5, com controle de margem, logs, export para Excel e regras de gestão configuráveis.
 
@@ -35,6 +36,20 @@ Automatizar a abertura e gerenciamento de posições com base em regras e sinais
 ---
 
 ## 🧠 Tecnologias e Competências
+
+## 📚 Aprendizados e Competências
+
+Este projeto foi construído para demonstrar, na prática, competências comuns em backend e automação:
+
+- Integração com API externa (MetaTrader5) e execução de ações idempotentes
+- Arquitetura modular por responsabilidades (services / managers)
+- Observabilidade: logs estruturados + rastreabilidade do loop
+- Resiliência: reconexão automática em falhas de comunicação
+- Persistência e auditoria: export periódico para Excel (openpyxl)
+- Processamento de dados com Pandas + indicadores técnicos (pandas-ta)
+- Boas práticas de configuração: arquivos `.sample.json` + `.local.json` (não versionados)
+
+> 🎯 Objetivo do projeto: **Daytrade Bot — Automação de Ordens com Python + MetaTrader 5**
 
 Python • MetaTrader5 • Pandas • pandas-ta • Automação • Gestão de risco (conceitos) • Logs • Data Processing • Export Excel
 
@@ -132,6 +147,10 @@ Copie os arquivos sample e crie os arquivos locais (não versionados):
 python run.py
 ```
 
+**Saídas geradas (outputs):**
+- Logs em `logs/` (ex.: `XAUUSD_BUY_manager_positions_hedge_YYYYMMDD.log`)
+- Excel em `results/` (ex.: `demo_monitor_positions_XAUUSD_BUY_YYYY-MM-DD.xlsx`)
+
 > Por padrão, o `run.py` executa o modo BUY.
 
 ---
@@ -149,8 +168,12 @@ pytest
 
 ## 📸 Demonstração (prints e evidências)
 
+Evidências reais de execução do bot: prints, logs e exemplo de arquivo Excel gerado.
+
 ### Execução em loop + logs (Spyder / console)
 ![Execução no Spyder](img/spyder_execucao.png)
+
+![Exemplo de Excel gerado](img/excel_output.png)
 
 
 ### Exemplo de arquivo gerado (Excel)
