@@ -1,5 +1,8 @@
 # Daytrade Bot (Python + MetaTrader 5)
 
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![License](https://img.shields.io/github/license/flavioro/daytrade-bot-python)
+
 Projeto em Python para monitoramento e execução automatizada de ordens no MetaTrader 5, com controle de margem, logs, export para Excel e regras de gestão configuráveis.
 
 > ⚠️ **Aviso importante:** este projeto é educacional. Não é recomendação de investimento. Operar no mercado financeiro envolve risco e pode gerar perdas.
@@ -145,8 +148,6 @@ pytest
 ---
 
 ## 📸 Demonstração (prints e evidências)
-
-> Coloque seus prints na pasta `img/` para o GitHub renderizar automaticamente no README.
 
 ### Execução em loop + logs (Spyder / console)
 ![Execução no Spyder](img/spyder_execucao.png)
