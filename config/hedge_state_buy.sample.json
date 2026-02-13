@@ -1,0 +1,8 @@
+{
+  "hedge_manager_active": false,
+  "active_hedge_trade_id": null,
+  "hedge_manager_cooldown_until": null,
+  "active_hedge_profit_max": 17.55,
+  "active_hedge_profit_min": -2.5,
+  "hedge_log": []
+}

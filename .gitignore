@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Ambientes
+.venv/
+venv/
+.env
+
+# Saídas do projeto
+logs/
+output/
+results/
+bkp/
+auxiliar/
+
+# Arquivos locais / sensíveis (NÃO versionar)
+config/*.local.json
+config/*credentials*.json
+config/*secret*.json
+
+# Permitir arquivos de exemplo (DEVEM subir)
+!config/*.sample.json
+
+# Extras (opcional)
+.DS_Store
+Thumbs.db
