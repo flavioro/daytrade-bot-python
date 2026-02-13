@@ -1,1 +1,2 @@
 MetaTrader5
+pandas-ta-classic>=0.3.0

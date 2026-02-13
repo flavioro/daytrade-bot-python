@@ -46,12 +46,12 @@ Este projeto foi construído para demonstrar, na prática, competências comuns 
 - Observabilidade: logs estruturados + rastreabilidade do loop
 - Resiliência: reconexão automática em falhas de comunicação
 - Persistência e auditoria: export periódico para Excel (openpyxl)
-- Processamento de dados com Pandas + indicadores técnicos (pandas-ta)
+- Processamento de dados com Pandas + indicadores técnicos (pandas-ta-classic)
 - Boas práticas de configuração: arquivos `.sample.json` + `.local.json` (não versionados)
 
 > 🎯 Objetivo do projeto: **Daytrade Bot — Automação de Ordens com Python + MetaTrader 5**
 
-Python • MetaTrader5 • Pandas • pandas-ta • Automação • Gestão de risco (conceitos) • Logs • Data Processing • Export Excel
+Python • MetaTrader5 • Pandas • pandas-ta-classic • Automação • Gestão de risco (conceitos) • Logs • Data Processing • Export Excel
 
 ---
 
@@ -117,8 +117,11 @@ pip install -r requirements.txt
 📌 Dependências principais (resumo):
 - `MetaTrader5` (integração com MT5)
 - `pandas` (tratamento de dados)
-- `pandas-ta` (indicadores técnicos)
+- `pandas-ta-classic` (indicadores técnicos)
 - `openpyxl` (export para Excel)
+
+
+> Nota: `pandas-ta` passou a exigir Python >= 3.12. Para manter compatibilidade no Linux/CI com Python 3.11, este projeto usa `pandas-ta-classic`.
 
 ### 4) Instale e configure o MetaTrader 5
 - Instale o terminal MT5 no Windows

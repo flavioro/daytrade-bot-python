@@ -1,4 +1,10 @@
-import pandas_ta as ta
+# Indicadores técnicos:
+# - Preferencial: pandas-ta (quando disponível)
+# - Alternativa compatível com Python 3.11 no Linux/CI: pandas-ta-classic
+try:
+    import pandas_ta as ta  # type: ignore
+except Exception:  # pragma: no cover
+    import pandas_ta_classic as ta  # type: ignore
 import pandas as pd
 
 def add_indicators(df, config):
