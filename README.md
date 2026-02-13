@@ -149,9 +149,8 @@ pytest
 > Coloque seus prints na pasta `img/` para o GitHub renderizar automaticamente no README.
 
 ### Execução em loop + logs (Spyder / console)
-![Execução no Spyder](img/Captura%20de%20Tela%20%2837%29.png)
+![Execução no Spyder](img/spyder_execucao.png)
 
-> Dica: se preferir, renomeie o arquivo para `img/spyder_execucao.png` e troque o link acima para ficar mais “limpo”.
 
 ### Exemplo de arquivo gerado (Excel)
 O bot gera planilhas para auditoria/monitoramento em `results/` (ex.: `results/demo_monitor_positions_<SYMBOL>_<BUY|SELL>_<DATA>.xlsx`).
