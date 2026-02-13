@@ -1,14 +1,18 @@
-import daytrade_bot.pytest as pytest
-from daytrade_bot.datetime import datetime, timezone
-from daytrade_bot.hedge_manager import check_hedge_trigger
+from datetime import datetime, timezone
+
+import pytest
+
+import daytrade_bot.hedge_manager as hm
+
 
 @pytest.fixture
 def logger():
     class MockLogger:
-        def info(self, msg): print(f"[INFO] {msg}")
-        def error(self, msg): print(f"[ERROR] {msg}")
-        def warning(self, msg): print(f"[WARN] {msg}")
+        def info(self, msg): pass
+        def error(self, msg): pass
+        def warning(self, msg): pass
     return MockLogger()
+
 
 def test_trigger_opens_hedge(monkeypatch, logger):
     """Deve abrir nova posição SELL quando trigger é atingido."""
@@ -25,16 +29,20 @@ def test_trigger_opens_hedge(monkeypatch, logger):
     buy_metrics = {"profit_buy": -100.0, "open_buy": 1}
 
     called = {"opened": False}
+
     def mock_open_order_hedge(**kwargs):
         called["opened"] = True
+
         class Result:
             retcode = 10009
             order = 123456
+
         return Result()
 
-    monkeypatch.setattr("hedge_manager.open_order_hedge", mock_open_order_hedge)
-    result = check_hedge_trigger(state, buy_metrics, [], 2450.0, now, config, logger, "XAUUSD")
+    monkeypatch.setattr(hm, "open_order_hedge", mock_open_order_hedge)
 
-    assert called["opened"]
-    assert result["hedge_manager_active"]
+    result = hm.check_hedge_trigger(state, buy_metrics, [], 2450.0, now, config, logger, "XAUUSD")
+
+    assert called["opened"] is True
+    assert result["hedge_manager_active"] is True
     assert result["active_hedge_trade_id"] == 123456
