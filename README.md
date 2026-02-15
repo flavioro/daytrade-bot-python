@@ -10,6 +10,19 @@ Projeto em Python para monitoramento e execução automatizada de ordens no Meta
 
 ---
 
+## ⚡ Quickstart (3 passos)
+
+```bash
+git clone https://github.com/flavioro/daytrade-bot-python.git
+cd daytrade-bot-python
+pip install -r requirements_ci.txt
+python -m src.daytrade_bot.main
+```
+
+> **Obs.:** você precisa ter o MetaTrader 5 instalado e configurado na sua máquina para a integração funcionar.
+
+---
+
 ## 🎯 Objetivo
 
 Automatizar a abertura e gerenciamento de posições com base em regras e sinais, incluindo:
